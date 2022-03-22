@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<script>
+  function myPrompt(email)
+     {
+      var email = prompt("Please add @ to your email", "friend"); // the second string is optional
+	  }
+</script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --color-white: #f3f3f3;
+  --color-burgundy:  #C73A52;
+  --color-darkburgundy-alpha: rgba(101, 8, 31,0.8);
+  --color-pink: #FFB6C1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-burgundy);
+  background-image: linear-gradient(
+      115deg,
+      rgba(255, 12, 192, 0.8),
+      rgba(255, 182, 192, 0.7)
+    ),
+    url(data:image/jpeg;base64,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);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+ 
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkburgundy-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-burgundy);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}</style>
+
+<div class="container">
+<header class="header">
+  <h1 id="title" class="text-center"> Survey Form</h1>
+  <p id="description"> Massive Open Online Courses (MOOCs) are free online courses available for anyone to enroll. MOOCs provide an affordable and flexible way to learn new skills, advance your career and deliver quality educational experiences at scale.
+
+Millions of people around the world use MOOCs to learn for a variety of reasons, including: career development, changing careers, college preparations, supplemental learning, lifelong learning, corporate eLearning & training, and more.
+
+MOOCs have dramatically changed the way the world learns.</p>
+</header>
+<form id="survey-form">
+<div class="form-group">
+<label id="name-label" for="name">Name</label>
+<input  type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+</div>
+<div class="form-group">
+<label id="email-label" for="email">Email</label>
+<input
+       type="email"
+       name="email"
+       id="email" 
+       class="form-control" 
+       placeholder="Enter your email" 
+       required
+       />
+</div>
+<div class="form-group">
+<label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+<input type="number" name="age" id="number" min="10" max="99"class="form-control" placeholder="Age"/>
+</div>
+  <div class="form-group">
+ <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select current role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="learner">Full Time Learner</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p>Would you recommend MOOC'S to a friend?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Definitely</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />Maybe</label
+      >
+
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>
+        What is your favorite feature of MOOC'S?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="accessability">Accessability</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>
+        What would you like to see improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="class-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />Class Projects</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="quizzes"
+          type="checkbox"
+          class="input-checkbox"
+        />Quizzes</label
+    
+      <label
+        ><input
+          name="prefer"
+          value="open-source-community"
+          type="checkbox"
+          class="input-checkbox"
+        />Open Source Community</label
+      >
+      
+      <label
+        ><input
+          name="prefer"
+          value="videos"
+          type="checkbox"
+          class="input-checkbox"
+        />Videos</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="city-meetups"
+          type="checkbox"
+          class="input-checkbox"
+        />City Meetups</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="wiki"
+          type="checkbox"
+          class="input-checkbox"
+        />Wiki</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="forum"
+          type="checkbox"
+          class="input-checkbox"
+        />Forum</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="additional-courses"
+          type="checkbox"
+          class="input-checkbox"
+        />Additional Courses</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>Any comments or suggestions?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+
+<div class="form-group" style="color: pink;"> 
+<button type="submit" class="submit-button" id="submit">submit</button>
+</div>
+</form>
+</div>
+
+</html>

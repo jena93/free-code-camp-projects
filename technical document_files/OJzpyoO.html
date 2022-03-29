@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://cdpn.io/jena93/fullpage/OJzpyoO -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - technical document</title>
+  
+  
+  
+  
+<style>
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <nav id="navbar">
+   <header>RESPONSIVE WEB DESIGN</header>
+      <ul>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Introduction">
+          Introduction</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Basic_HTML_&amp;_HTML5">
+          Basic HTML &amp; HTML5</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Basic_CSS">
+          Basic CSS</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Applied_Visual_Design">
+          Applied Visual Design</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Applied_Accessability">
+          Applied Accessability</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Responsive_Web_Design_Principles">
+          Responsive Web Design Principles</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#CSS_Flexbox">
+          CSS Flexbox</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#CSS_Grid">
+          CSS Grid</a></li>
+        <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#Responsive_Web_Design_Projects">
+          Responsive Web Design Projects</a></li>
+                      </ul>
+   <li><a class="nav-link" href="https://cdpn.io/jena93/fullpage/OJzpyoO#References">
+          References</a></li>
+                      
+</nav>
+<main id="main-doc">
+  <section id="Introduction" class="main-section">
+    <header>Introduction</header>
+    <article>
+      <p>
+       Responsive Web Design Certification, you'll learn the languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for design.
+
+First, you'll build a cat photo app to learn the basics of HTML and CSS. Later, you'll learn modern techniques like CSS variables by building a penguin, and best practices for accessibility by building a web form.
+
+Finally, you'll learn how to make webpages that respond to different screen sizes by building a Twitter card with Flexbox, and a complex blog layout with CSS Grid. </p>
+             </article>
+          
+    </section>
+  <section id="Basic_HTML_&amp;_HTML5" class="main-section">
+    <header> Basic HTML &amp; HTML5</header>
+    <article>
+      <p>
+        HTML is a markup language that uses a special syntax or notation to describe the structure of a webpage to the browser. HTML elements usually have opening and closing tags that surround and give meaning to content. For example, different elements can describe text as a heading, paragraph, or list item.
+           </p>
+               
+      <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+
+"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
+
+HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as
+        <code> 
+          &lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;aside&gt;, &lt;audio&gt;, &lt;canvas&gt;, &lt;datalist&gt;, &lt;details&gt;, &lt;embed&gt;, &lt;nav&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;video&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; 
+          </code>
+          and many others.
+
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "&lt;" and "&gt;". The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. <code>For example, the &lt;title&gt; tag can be written as &lt;Title&gt;, &lt;TITLE&gt;, </code> or in any other way.  
+        
+       Some excersises available in HTML are 
+      </p>
+      <ul>
+        <li>Add Images to your webpage</li>
+        <li>Create a bulleted unordered list</li>
+        <li>create a text field</li>
+        <li>Create a form element</li>
+      </ul>
+      </article>
+</section>
+<section id="Basic_CSS" class="main-section">
+  <header>Basic CSS</header>
+  <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+
+CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
+</p>
+<p>CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that you write in HTML. With CSS, you can control the color, font, size, spacing, and many other aspects of HTML elements. <code> 
+  &lt;style&gt;
+  .blue-text {
+    color: blue;
+  }
+&lt;/style&gt;
+ </code>
+  Some CSS excercises available 
+</p>
+<ul>
+  <li> Change color of text</li>
+  <li> Style multiple elements with CSS Class</li>
+  <li> Set the id of an element</li>
+  <li> Use a media query to change a variable</li>
+</ul>
+
+</section>
+<section id="Applied_Visual_Design" class="main-section">
+<header>Applied Visual Design
+</header>
+<article>
+<p>Visual design is a combination of typography, color theory, graphics, animation, page layout, and more to help deliver your unique message.
+
+In this course, you'll learn how to apply these different elements of visual design to your webpages.
+</p>
+ <code> &lt;style&gt;
+  h4 {
+text-align: center;
+  }
+  p {
+text-align: justify;
+  }
+  .links {
+    margin-right: 20px;
+
+  }
+  .fullCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+&lt;/style&gt;  
+</code>
+ <ul>
+<li>Create visual balance using the text-align property</li>
+<li>Decrease the opacity of an element</li>
+<li>Create Texture by adding a subtle pattern as a background image</li>
+<li>Create a graphic using CSS</li>
+</ul>
+</article>
+</section>
+<section id="Applied_Accessability" class="main-section">
+<header>Applied Accessability
+</header>
+<article>
+<p>In web development, accessibility refers to web content and a UI (user interface) that can be understood, navigated, and interacted with by a broad audience. This includes people with visual, auditory, mobility, or cognitive disabilities.
+</p>
+<code>&lt;img src="doingKarateWow.jpeg" alt="Camper cat doing karate"&gt;</code>
+<ul>
+<li>Add text Alternative to images for Visually Impaired Accessibility</li>
+<li>Jump straight to the content using the main element </li>
+<li>Improve form field accessibility with the label element</li>
+<li>use tabindex to add keyboard focus to an element</li>
+</ul>
+</article>
+</section>
+<section id="Responsive_Web_Design_Principles" class="main-section">
+<header>Responsive Web Design Principles
+</header>
+<article>
+<p>There are many devices that can access the web, and they come in all shapes and sizes. Responsive web design is the practice of designing flexible websites that can respond to different screen sizes, orientations, and resolutions.
+
+In this course, you'll learn how to use CSS to make your webpages look good, no matter what device they're viewed on.
+</p>
+<code> &lt;style&gt;
+h2 {
+   width: 80vw;
+ }
+ p{
+   width: 75vmin;
+ }
+&lt;/style&gt; </code>
+<ul>
+<li>Create a media query</li>
+<li>Make an image Responsive</li>
+<li>Use Retina images for Higher resolution displays</li>
+<li>Make topography responsive</li>
+</ul>
+</article>
+</section>
+<section id="CSS_Flexbox" class="main-section">
+<header>CSS Flexbox
+</header>
+<article>
+<p>Flexbox is a powerful, well-supported layout method that was introduced with the latest version of CSS, CSS3. With flexbox, it's easy to center elements on the page and create dynamic user interfaces that shrink and expand automatically.
+</p>
+<code>&lt;style&gt;
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    align-self: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    align-self: flex-end;
+    height: 200px;
+    width: 200px;
+  }
+&lt;/style&gt;</code>
+<ul>
+<li>Use flex-direction property to make a row</li>
+<li>Align elements using the align-items property</li>
+<li>Use the order property to rearrange items</li>
+<li>Align elements using the justify-content property</li>
+</ul>
+</article>
+</section>
+<section id="CSS_Grid" class="main-section">
+<header>CSS Grid
+</header>
+<article>
+<p>The CSS grid is a newer standard that makes it easy to build complex responsive layouts. It works by turning an HTML element into a grid, and lets you place child elements anywhere within.
+
+In this course, you'll learn the fundamentals of CSS grid by building different complex layouts, including a blog.
+</p>
+<code>&lt;style&gt;
+    .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+  <strong>display: grid;</strong>
+  }
+&lt;/style&gt;</code>
+<ul>
+<li>Use CSS tgrid units to change size of columns</li>
+<li>Align item horizontaly using justify-self</li>
+<li>Divide grid into an area template</li>
+<li>Create flexible layouts using auto-fit</li>
+</ul>
+</article>
+</section>
+<section id="Responsive_Web_Design_Projects" class="main-section">
+<header>Responsive Web Design Projects
+</header>
+<article>
+<p> By working on these projects, you will get a chance to apply all of the skills, principles, and concepts you have learned so far: HTML, CSS, Visual Design, Accessibility, and more.
+
+Complete the five web programming projects below to earn your Responsive Web Design certification.
+</p>
+<ul>
+<li>Build a Tribute Page</li>
+<li>Build a Survey Form</li>
+<li>Build a Product landing Page</li>
+<li>Build a Technical Documentation Page</li>
+<li>Build a Personal Portfolio Webpage</li>
+</ul>
+</article>
+</section>
+<section id="References" class="main-section">
+<header>References
+</header>
+<article>
+<ul>
+<li>Some of the documentation in this page is taken from
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guide" target="_blank">CSS</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guide" target="_blank">HTML</a>
+          </li>
+<li>And also
+          <a href="https://www.freecodecamp.org/learn/responsive-web-design/#responsive-web-design-projects" target="_blank">freecodecamp</a></li>
+</ul>
+</article>
+</section>
+</main>
+    <script src="./stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js.download"></script>
+
+  <script src="./bundle.js.download"></script><div id="fcc_test_suite_wrapper" style="position: relative !important; z-index: 99999 !important;"></div>
+      <script id="rendered-js">
+// !! IMPORTANT README:
+
+// You may add additional external JS and CSS as needed to complete the project, however the current external resource MUST remain in place for the tests to work. BABEL must also be left in place. 
+
+/***********
+INSTRUCTIONS:
+  - Select the project you would 
+    like to complete from the dropdown 
+    menu.
+  - Click the "RUN TESTS" button to
+    run the tests against the blank 
+    pen.
+  - Click the "TESTS" button to see 
+    the individual test cases. 
+    (should all be failing at first)
+  - Start coding! As you fulfill each
+    test case, you will see them go   
+    from red to green.
+  - As you start to build out your 
+    project, when tests are failing, 
+    you should get helpful errors 
+    along the way!
+    ************/
+
+// PLEASE NOTE: Adding global style rules using the * selector, or by adding rules to body {..} or html {..}, or to all elements within body or html, i.e. h1 {..}, has the potential to pollute the test suite's CSS. Try adding: * { color: red }, for a quick example!
+
+// Once you have read the above messages, you can delete all comments.
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
